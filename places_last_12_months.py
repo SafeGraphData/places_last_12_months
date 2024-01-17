@@ -54,4 +54,4 @@ last_12_months = alt.Chart(last_12_months_df).mark_bar().encode(
     labelAngle=45
 )
 
-st.altair_chart(last_12_months)
+st.altair_chart(last_12_months, use_container_width=True)
