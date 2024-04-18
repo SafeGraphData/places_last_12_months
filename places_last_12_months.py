@@ -37,7 +37,7 @@ last_12_months_df['Total POI'] = pd.to_numeric(last_12_months_df['Total POI'])
 last_12_months = alt.Chart(last_12_months_df).mark_bar().encode(
     x=alt.X('Release month', timeUnit='yearmonth'),
     y='Total POI',
-    color='Country',
+    color='alt.Color('Country', scale=alt.Scale(scheme='redyellowblue')),
     tooltip=[alt.Tooltip('Release month', timeUnit='yearmonth', title='Release month'),
              alt.Tooltip('Country'),
              alt.Tooltip('Total POI', format=',')]
